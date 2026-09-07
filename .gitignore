@@ -4,16 +4,14 @@
 .idea/
 *.log
 
-# Secrets (never commit credentials or env files)
 .env
 .env.*
 !*.env.example
 
-# Large or sensitive database dumps (uncomment if you have raw dumps)
 # *.dump
 # *.sql.gz
 
-# Frontend (Flutter)
+# Frontend
 **/frontend/.dart_tool/
 **/frontend/.flutter-plugins
 **/frontend/.flutter-plugins-dependencies
@@ -33,7 +31,7 @@
 **/frontend/google-services.json
 **/frontend/GoogleService-Info.plist
 
-# Backend (Node / NestJS / Express)
+# Backend
 **/backend/node_modules/
 **/backend/dist/
 **/backend/build/
