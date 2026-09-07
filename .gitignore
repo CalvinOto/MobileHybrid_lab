@@ -1,0 +1,43 @@
+# Miscellaneous
+.DS_Store
+.vscode/
+.idea/
+*.log
+
+# Secrets (never commit credentials or env files)
+.env
+.env.*
+!*.env.example
+
+# Large or sensitive database dumps (uncomment if you have raw dumps)
+# *.dump
+# *.sql.gz
+
+# Frontend (Flutter)
+**/frontend/.dart_tool/
+**/frontend/.flutter-plugins
+**/frontend/.flutter-plugins-dependencies
+**/frontend/.packages
+**/frontend/.pub-cache/
+**/frontend/.pub/
+**/frontend/build/
+**/frontend/android/app/debug/
+**/frontend/android/app/profile/
+**/frontend/android/app/release/
+**/frontend/android/key.properties
+**/frontend/*.keystore
+**/frontend/*.jks
+**/frontend/ios/Pods/
+**/frontend/ios/.symlinks/
+**/frontend/ios/Flutter/ephemeral/
+**/frontend/google-services.json
+**/frontend/GoogleService-Info.plist
+
+# Backend (Node / NestJS / Express)
+**/backend/node_modules/
+**/backend/dist/
+**/backend/build/
+**/backend/coverage/
+**/backend/npm-debug.log*
+**/backend/yarn-debug.log*
+**/backend/yarn-error.log*

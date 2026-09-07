@@ -1,0 +1,27 @@
+const express = require('express');
+const cors = require('cors');
+require('dotenv').config();
+
+const app = express();
+
+app.use(cors());
+app.use(express.json());
+app.use('/uploads', express.static('uploads'));
+
+
+app.use('/api/auth', require('./routes/auth'));
+app.use('/api/resources', require('./routes/resources'));
+app.use('/api/purchases', require('./routes/purchases'));
+
+app.get('/', (req, res) => {
+  res.json({ message: 'Honkai Star Retail API is running!' });
+});
+
+app.use((req, res) => {
+  res.status(404).json({ message: 'Route not found' });
+});
+
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
